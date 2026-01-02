@@ -11,7 +11,7 @@
       margin: 0;
       line-height: 1.6;
       max-width: 100%;
-      scroll-behavior: smooth; /* makes in-page scrolling smooth */
+      scroll-behavior: smooth; /* smooth scrolling */
     }
 
     header {
@@ -56,16 +56,25 @@
       color: #2f6b2f;
     }
 
-    /* Add spacing before footer to require scrolling */
+    /* Spacer to create scroll space before footer */
     .spacer {
-      height: 600px; /* adjust this number to increase/decrease scroll distance */
+      height: 600px; /* adjust to increase/decrease scroll */
     }
 
+    /* Footer / Contact Us styling */
     footer {
-      background-color: #f4f4f4;
-      padding: 20px;
+      background-color: #d4edda; /* light green */
+      padding: 40px 30px; /* more space top/bottom and sides */
       margin-top: 40px;
       font-size: 0.9em;
+      display: flex;
+      justify-content: flex-end; /* aligns contact to right */
+      align-items: center;
+      border-radius: 12px; /* rounded corners */
+    }
+
+    footer > div {
+      max-width: 400px; /* makes it look like a rectangle */
     }
   </style>
 </head>
@@ -79,8 +88,7 @@
     <a href="index.html">Home</a>
     <a href="programs.html">Programs</a>
     <a href="partners.html">Partners</a>
-    <!-- Changed link to scroll to footer -->
-    <a href="#contact">Contact</a>
+    <a href="#contact">Contact</a> <!-- scrolls to footer -->
   </nav>
 </header>
 
@@ -120,15 +128,17 @@ Njawara, The Gambia
 </main>
 
 <footer id="contact">
-  <h2>Contact Us</h2>
-  <p>
-    <strong>Email:</strong> njawaraatc@gmail.com<br>
-    <strong>Phone:</strong> +220 123 4567<br>
-    <strong>Address:</strong> Njawara Agriculture Training Site, Njawara, Central River Region, The Gambia
-  </p>
-  <p>
-    This site is managed by the Njawara Agriculture Training Site.
-  </p>
+  <div>
+    <h2>Contact Us</h2>
+    <p>
+      <strong>Email:</strong> njawaraatc@gmail.com<br>
+      <strong>Phone:</strong> +220 123 4567<br>
+      <strong>Address:</strong> Njawara Agriculture Training Site, Njawara, Central River Region, The Gambia
+    </p>
+    <p>
+      This site is managed by the Njawara Agriculture Training Site.
+    </p>
+  </div>
 </footer>
 
 </body>
