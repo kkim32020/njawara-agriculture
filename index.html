@@ -68,7 +68,7 @@
       margin-top: 40px;
       font-size: 0.9em;
       display: flex;
-      justify-content: flex-end; /* align right side */
+      justify-content: flex-start; /* start flex from left so we can offset card */
       position: relative;
     }
 
@@ -78,11 +78,9 @@
       padding: 30px 20px;
       border-radius: 12px;
       max-width: 400px;
-      /* move slightly left inside right half */
-      margin-right: 50px; 
+      margin-left: 55%; /* moves card leftwards to middle of right half */
     }
 
-    /* Optional: make the contact card text look nicer */
     .contact-card h2 {
       margin-top: 0;
     }
