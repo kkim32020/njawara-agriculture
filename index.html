@@ -11,7 +11,6 @@
       margin: 0;
       line-height: 1.6;
       max-width: 100%;
-      /* remove CSS smooth scroll so JS easing works better */
     }
 
     header {
@@ -65,17 +64,27 @@
     /* Footer / Contact Us styling */
     footer {
       background-color: #d4edda; /* light green */
-      padding: 40px 30px; /* more space top/bottom and sides */
+      padding: 80px 0; /* extra top and bottom space */
       margin-top: 40px;
       font-size: 0.9em;
       display: flex;
-      justify-content: flex-end; /* aligns contact to right */
-      align-items: center;
-      border-radius: 12px; /* rounded corners */
+      justify-content: flex-end; /* align right side */
+      position: relative;
     }
 
-    footer > div {
-      max-width: 400px; /* makes it look like a rectangle */
+    /* Inner square card */
+    .contact-card {
+      background-color: #a8d5a2; /* darker green */
+      padding: 30px 20px;
+      border-radius: 12px;
+      max-width: 400px;
+      /* move slightly left inside right half */
+      margin-right: 50px; 
+    }
+
+    /* Optional: make the contact card text look nicer */
+    .contact-card h2 {
+      margin-top: 0;
     }
   </style>
 </head>
@@ -89,7 +98,7 @@
     <a href="index.html">Home</a>
     <a href="programs.html">Programs</a>
     <a href="partners.html">Partners</a>
-    <a href="#contact" id="contactLink">Contact</a> <!-- smooth scroll JS -->
+    <a href="#contact" id="contactLink">Contact</a>
   </nav>
 </header>
 
@@ -127,7 +136,7 @@ Njawara, The Gambia
 </main>
 
 <footer id="contact">
-  <div>
+  <div class="contact-card">
     <h2>Contact Us</h2>
     <p>
       <strong>Email:</strong> njawaraatc@gmail.com<br>
@@ -143,12 +152,12 @@ Njawara, The Gambia
 <script>
   // Smooth easing scroll to contact section
   document.getElementById('contactLink').addEventListener('click', function(e) {
-    e.preventDefault(); // prevent default jump
+    e.preventDefault();
     const target = document.getElementById('contact');
     const startPosition = window.pageYOffset;
     const targetPosition = target.getBoundingClientRect().top + startPosition;
     const distance = targetPosition - startPosition;
-    const duration = 800; // duration in ms
+    const duration = 800;
     let start = null;
 
     function step(timestamp) {
