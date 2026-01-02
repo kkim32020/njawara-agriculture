@@ -11,6 +11,7 @@
       margin: 0;
       line-height: 1.6;
       max-width: 100%;
+      scroll-behavior: smooth; /* makes in-page scrolling smooth */
     }
 
     header {
@@ -55,6 +56,11 @@
       color: #2f6b2f;
     }
 
+    /* Add spacing before footer to require scrolling */
+    .spacer {
+      height: 600px; /* adjust this number to increase/decrease scroll distance */
+    }
+
     footer {
       background-color: #f4f4f4;
       padding: 20px;
@@ -73,7 +79,8 @@
     <a href="index.html">Home</a>
     <a href="programs.html">Programs</a>
     <a href="partners.html">Partners</a>
-    <a href="contact.html">Contact</a>
+    <!-- Changed link to scroll to footer -->
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -107,9 +114,12 @@ We work with local farmers, youth, and community members in and around Njawara.
 Njawara, The Gambia
 </p>
 
+<!-- Spacer before footer -->
+<div class="spacer"></div>
+
 </main>
 
-<footer>
+<footer id="contact">
   <h2>Contact Us</h2>
   <p>
     <strong>Email:</strong> njawaraatc@gmail.com<br>
