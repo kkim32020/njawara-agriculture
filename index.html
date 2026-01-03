@@ -47,7 +47,7 @@
       text-decoration: underline;
     }
 
-    /* MAIN CONTENT */
+    /* MAIN */
     main {
       padding: 20px;
       max-width: 900px;
@@ -64,22 +64,23 @@
     /* CONTACT SECTION */
     footer {
       background-color: #d4edda;
-      padding: 120px 0;
+      padding: 140px 0;
       position: relative;
       display: flex;
       align-items: center;
     }
 
-    /* LOGO LEFT */
-    .logo-container {
+    /* NATC LOGO IMAGE */
+    .natc-logo {
       position: absolute;
-      left: 14%;
+      left: 18%;
       top: 50%;
       transform: translateY(-50%);
+      max-width: 220px;
     }
 
-    .logo-container svg {
-      width: 220px;
+    .natc-logo img {
+      width: 100%;
       height: auto;
     }
 
@@ -126,7 +127,8 @@ community-based agricultural training.
 
 <h2>What We Do</h2>
 <p>
-We engage in crop production and demonstration plots, vegetable gardening and composting, and provide farmer training and youth engagement to strengthen the local agricultural community.
+We engage in crop production and demonstration plots, vegetable gardening and composting,
+and provide farmer training and youth engagement to strengthen the local agricultural community.
 </p>
 
 <h2>Who We Serve</h2>
@@ -145,53 +147,9 @@ Njawara, The Gambia
 
 <footer id="contact">
 
-  <!-- HAND-DRAWN BAOBAB LOGO -->
-  <div class="logo-container">
-    <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
-
-      <!-- Baobab canopy -->
-      <path d="
-        M70 120
-        C60 40, 240 40, 230 120
-        C260 150, 240 200, 200 210
-        C190 250, 110 250, 100 210
-        C60 200, 40 150, 70 120
-        Z"
-        fill="white"/>
-
-      <!-- Thick baobab trunk -->
-      <path d="
-        M115 210
-        C100 260, 95 300, 110 340
-        L190 340
-        C205 300, 200 260, 185 210
-        Z"
-        fill="white"/>
-
-      <!-- Roots -->
-      <path d="
-        M130 340 C90 360, 60 365, 40 370
-        M170 340 C210 360, 240 365, 260 370
-        M150 340 C150 365, 150 375, 150 380
-        "
-        stroke="white"
-        stroke-width="7"
-        fill="none"
-        stroke-linecap="round"/>
-
-      <!-- NATC text -->
-      <text
-        x="150"
-        y="180"
-        text-anchor="middle"
-        font-size="44"
-        font-weight="bold"
-        fill="white"
-        style="letter-spacing: 3px;">
-        NATC
-      </text>
-
-    </svg>
+  <!-- NATC LOGO -->
+  <div class="natc-logo">
+    <img src="natc-logo.png" alt="NATC Logo">
   </div>
 
   <!-- CONTACT CARD -->
