@@ -51,6 +51,7 @@
     main {
       padding: 20px;
       max-width: 900px;
+      margin: 0 auto;
     }
 
     h2 {
@@ -61,27 +62,30 @@
       height: 600px;
     }
 
-    /* CONTACT SECTION */
+    /* FOOTER / CONTACT SECTION */
     footer {
       background-color: #d4edda;
-      padding: 140px 0;
-      position: relative;
+      padding: 40px 20px;
       display: flex;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px; /* space between logo and contact card */
+      flex-wrap: wrap; /* allows stacking on smaller screens */
     }
 
     /* NATC LOGO IMAGE */
     .natc-logo {
-      position: absolute;
-      left: 18%;
-      top: 50%;
-      transform: translateY(-50%);
-      max-width: 220px;
+      flex: 1 1 250px; /* responsive flex, min 250px */
+      max-width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .natc-logo img {
       width: 100%;
       height: auto;
+      display: block;
     }
 
     /* CONTACT CARD */
@@ -89,12 +93,33 @@
       background-color: #a8d5a2;
       padding: 30px 25px;
       border-radius: 12px;
+      flex: 1 1 250px; /* responsive flex */
       max-width: 400px;
-      margin-left: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .contact-card h2 {
       margin-top: 0;
+    }
+
+    /* RESPONSIVE TWEAKS */
+    @media (max-width: 768px) {
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+      }
+
+      .contact-card {
+        max-width: 90%;
+      }
+
+      .natc-logo {
+        max-width: 70%;
+      }
     }
   </style>
 </head>
@@ -149,7 +174,7 @@ Njawara, The Gambia
 
   <!-- NATC LOGO -->
   <div class="natc-logo">
-    <img src="natc-logo.jpeg" alt="NATC Logo">
+    <img src="natc-logo.png" alt="NATC Logo">
   </div>
 
   <!-- CONTACT CARD -->
