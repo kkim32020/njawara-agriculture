@@ -2,16 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NATC | Home</title>
+  <title>Njawara Agriculture Training Center</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    body { font-family: Arial; margin: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+    }
 
     header {
-      background: #2f6b2f;
+      background-color: #2f6b2f;
       color: white;
       padding: 20px;
+    }
+
+    header h1 {
+      display: inline-block;
+      margin: 0;
+      vertical-align: middle;
+    }
+
+    header img {
+      height: 40px;
+      margin-left: 12px;
+      vertical-align: middle;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a {
@@ -19,14 +39,100 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
 
-    nav a:hover { text-decoration: underline; }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
     main {
       padding: 20px;
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #2f6b2f;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .spacer {
+      height: 600px;
+    }
+
+    footer {
+      background-color: #d4edda;
+      padding: 40px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .natc-logo {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .natc-logo img {
+      max-width: 280px; /* slightly smaller than contact box */
+      width: 100%;
+      height: auto;
+    }
+
+    .divider {
+      width: 6px; /* thicker */
+      height: 340px; /* slightly longer than contact box */
+      background-color: #5a8f5a;
+      border-radius: 20px; /* rounded edges */
+    }
+
+    .contact-card {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-card-inner {
+      background-color: #a8d5a2;
+      padding: 30px 25px;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .contact-card-inner h2 {
+      margin-top: 0;
+    }
+
+    @media (max-width: 768px) {
+      footer {
+        flex-direction: column;
+      }
+
+      .natc-logo,
+      .contact-card {
+        width: 100%;
+      }
+
+      .divider {
+        display: none;
+      }
+
+      .natc-logo img {
+        max-width: 70%;
+      }
+
+      .contact-card-inner {
+        max-width: 90%;
+      }
     }
   </style>
 </head>
@@ -35,22 +141,122 @@
 
 <header>
   <h1>Njawara Agriculture Training Center</h1>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_The_Gambia.svg" alt="Flag of The Gambia">
+  
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="programs.html">Programs</a>
     <a href="partners.html">Partners</a>
-    <a href="contact.html">Contact</a>
+    <a href="#contact" id="contactLink">Contact</a>
   </nav>
 </header>
 
 <main>
-  <h2>Welcome</h2>
-  <p>
-    Welcome to the Njawara Agriculture Training Center (NATC). We are dedicated to
-    training farmers and strengthening rural livelihoods through sustainable agriculture.
-  </p>
+
+<h2>About Us</h2>
+<p>
+The Njawara Agriculture Training Center (NATC) is a community-led organization founded in 1990 and registered as an NGO in 1997. The center is currently led by Director Al Pha Sey, who continues to guide its mission of strengthening rural livelihoods through sustainable agriculture.
+</p>
+
+<p>
+Located in Njawara Village, the center includes training facilities and demonstration fields where both men and women learn improved farming techniques designed to increase productivity while protecting the environment.
+</p>
+
+<h2>Our Mission</h2>
+<p>
+Our mission is to work in partnership with local and international institutions to train farmers in sustainable agricultural systems. We aim to promote self-reliance, increase employment opportunities, reduce poverty, and discourage rural-to-urban migration.
+</p>
+
+<h2>Our Vision</h2>
+<p>
+We envision stronger rural communities with improved livelihoods, reliable food systems, and increased economic opportunities.
+</p>
+
+<h2>What We Do</h2>
+<ul>
+  <li>Crop production and demonstration plots</li>
+  <li>Agroforestry and integration of trees with farmland</li>
+  <li>Soil and water conservation techniques</li>
+  <li>Livestock and crop integration</li>
+  <li>Pest management and climate resilience strategies</li>
+</ul>
+
+<!-- PROJECTS SECTION -->
+<h2 id="projects">Projects</h2>
+
+<h3>Current Projects</h3>
+<ul>
+  <li>Farmer training programs in sustainable agriculture</li>
+  <li>Youth engagement and skills development in farming</li>
+  <li>Demonstration plots for improved crop production</li>
+  <li>Agroforestry and natural resource management initiatives</li>
+</ul>
+
+<h3>Past Projects</h3>
+<ul>
+  <li>Introduction of contour farming to reduce soil erosion</li>
+  <li>Soil conservation and fertility improvement programs</li>
+  <li>Crop diversification strategies for climate resilience</li>
+  <li>Community-based agricultural training workshops</li>
+</ul>
+
+<h2>Location</h2>
+<p>
+Njawara Village, North Bank Region, The Gambia
+</p>
+
+<div class="spacer"></div>
+
 </main>
+
+<footer id="contact">
+
+  <div class="natc-logo">
+    <img src="natc-logo.jpeg" alt="NATC Logo">
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contact-card">
+    <div class="contact-card-inner">
+      <h2>Contact Us</h2>
+      <p>
+        <strong>Email:</strong> njawaraatc@gmail.com<br>
+        <strong>Phone:</strong> +220 123 4567<br>
+        <strong>Address:</strong> Njawara Agriculture Training Center, Njawara, North Bank Region, The Gambia
+      </p>
+      <p>
+        This site is managed by the Njawara Agriculture Training Center.
+      </p>
+    </div>
+  </div>
+
+</footer>
+
+<script>
+  document.getElementById('contactLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.getElementById('contact');
+    const start = window.pageYOffset;
+    const end = target.getBoundingClientRect().top + start;
+    const duration = 800;
+    let startTime = null;
+
+    function ease(t) {
+      return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3)/2;
+    }
+
+    function animate(time) {
+      if (!startTime) startTime = time;
+      const progress = Math.min((time - startTime) / duration, 1);
+      window.scrollTo(0, start + (end - start) * ease(progress));
+      if (progress < 1) requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  });
+</script>
 
 </body>
 </html>
