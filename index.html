@@ -148,7 +148,7 @@
     <a href="projects.html">Projects</a>
     <a href="programs.html">Programs</a>
     <a href="partners.html">Partners</a>
-    <a href="#contact" id="contactLink">Contact</a>
+    <a href="index.html#contact">Contact</a>
   </nav>
 </header>
 
@@ -214,31 +214,6 @@ Njawara Village, North Bank Region, The Gambia
   </div>
 
 </footer>
-
-<script>
-  // Smooth scroll to contact section
-  document.getElementById('contactLink').addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.getElementById('contact');
-    const start = window.pageYOffset;
-    const end = target.getBoundingClientRect().top + start;
-    const duration = 800;
-    let startTime = null;
-
-    function ease(t) {
-      return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3)/2;
-    }
-
-    function animate(time) {
-      if (!startTime) startTime = time;
-      const progress = Math.min((time - startTime) / duration, 1);
-      window.scrollTo(0, start + (end - start) * ease(progress));
-      if (progress < 1) requestAnimationFrame(animate);
-    }
-
-    requestAnimationFrame(animate);
-  });
-</script>
 
 </body>
 </html>
