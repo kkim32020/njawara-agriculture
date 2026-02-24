@@ -67,58 +67,61 @@
       background-color: #d4edda;
       padding: 40px 20px;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 50px; /* space between logo and contact card */
-      flex-wrap: wrap; /* allows stacking on smaller screens */
+      flex-wrap: wrap;
     }
 
-    /* NATC LOGO IMAGE */
+    /* LEFT HALF (LOGO) */
     .natc-logo {
-      flex: 1 1 250px; /* responsive flex, min 250px */
-      max-width: 400px;
+      width: 50%;
       display: flex;
-      justify-content: center;
+      justify-content: center; /* center within left half */
       align-items: center;
     }
 
     .natc-logo img {
+      max-width: 300px;
       width: 100%;
       height: auto;
-      display: block;
     }
 
-    /* CONTACT CARD */
+    /* RIGHT HALF (CONTACT) */
     .contact-card {
+      width: 50%;
+      display: flex;
+      justify-content: center; /* center within right half */
+    }
+
+    .contact-card-inner {
       background-color: #a8d5a2;
       padding: 30px 25px;
       border-radius: 12px;
-      flex: 1 1 250px; /* responsive flex */
       max-width: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      width: 100%;
     }
 
-    .contact-card h2 {
+    .contact-card-inner h2 {
       margin-top: 0;
     }
 
-    /* RESPONSIVE TWEAKS */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 30px;
       }
 
+      .natc-logo,
       .contact-card {
-        max-width: 90%;
+        width: 100%;
       }
 
-      .natc-logo {
+      .natc-logo img {
         max-width: 70%;
+      }
+
+      .contact-card-inner {
+        max-width: 90%;
       }
     }
   </style>
@@ -172,22 +175,24 @@ Njawara, The Gambia
 
 <footer id="contact">
 
-  <!-- NATC LOGO -->
+  <!-- LEFT: LOGO -->
   <div class="natc-logo">
     <img src="natc-logo.jpeg" alt="NATC Logo">
   </div>
 
-  <!-- CONTACT CARD -->
+  <!-- RIGHT: CONTACT -->
   <div class="contact-card">
-    <h2>Contact Us</h2>
-    <p>
-      <strong>Email:</strong> njawaraatc@gmail.com<br>
-      <strong>Phone:</strong> +220 123 4567<br>
-      <strong>Address:</strong> Njawara Agriculture Training Center, Njawara, Central River Region, The Gambia
-    </p>
-    <p>
-      This site is managed by the Njawara Agriculture Training Center.
-    </p>
+    <div class="contact-card-inner">
+      <h2>Contact Us</h2>
+      <p>
+        <strong>Email:</strong> njawaraatc@gmail.com<br>
+        <strong>Phone:</strong> +220 123 4567<br>
+        <strong>Address:</strong> Njawara Agriculture Training Center, Njawara, Central River Region, The Gambia
+      </p>
+      <p>
+        This site is managed by the Njawara Agriculture Training Center.
+      </p>
+    </div>
   </div>
 
 </footer>
