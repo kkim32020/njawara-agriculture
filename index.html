@@ -64,11 +64,14 @@
       background-color: #d4edda;
       padding: 40px 20px;
       display: flex;
+      align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 20px;
     }
 
     .natc-logo {
-      width: 50%;
+      width: 45%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -80,8 +83,14 @@
       height: auto;
     }
 
+    .divider {
+      width: 2px;
+      height: 280px;
+      background-color: #5a8f5a;
+    }
+
     .contact-card {
-      width: 50%;
+      width: 45%;
       display: flex;
       justify-content: center;
     }
@@ -101,13 +110,15 @@
     @media (max-width: 768px) {
       footer {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
       }
 
       .natc-logo,
       .contact-card {
         width: 100%;
+      }
+
+      .divider {
+        display: none;
       }
 
       .natc-logo img {
@@ -138,7 +149,7 @@
 
 <h2>About Us</h2>
 <p>
-The Njawara Agriculture Training Center (NATC) is a community-led organization founded in 1990 by Mr. Badarra Jobe, a native of Njawara Village and the local Alkalo. It became a registered NGO in 1997. NATC was established to support rural farmers and youth through practical, hands-on training in sustainable and ecological agriculture.
+The Njawara Agriculture Training Center (NATC) is a community-led organization founded in 1990 and registered as an NGO in 1997. The center is currently led by Director Al Pha Sey, who continues to guide its mission of strengthening rural livelihoods through sustainable agriculture.
 </p>
 
 <p>
@@ -156,9 +167,6 @@ We envision stronger rural communities with improved livelihoods, reliable food 
 </p>
 
 <h2>What We Do</h2>
-<p>
-NATC provides training in ecological and sustainable farming practices, including:
-</p>
 <ul>
   <li>Crop production and demonstration plots</li>
   <li>Agroforestry and integration of trees with farmland</li>
@@ -170,21 +178,17 @@ NATC provides training in ecological and sustainable farming practices, includin
 
 <h2>Impact in the Community</h2>
 <p>
-NATC has introduced improved agricultural practices that have significantly increased productivity and sustainability. One key example is the introduction of contour farming, where crops are planted across slopes rather than along them. This method reduces soil erosion, preserves fertility, and protects lowland rice fields from sediment damage.
-</p>
-
-<p>
-Farmers are also trained in diversification and strategic planting techniques to reduce crop losses during periods of low rainfall. These methods help improve resilience and ensure more stable yields throughout the year.
+NATC has introduced improved agricultural practices such as contour farming to reduce soil erosion and improve yields. Farmers are also trained in diversification and climate-resilient techniques to better withstand irregular rainfall.
 </p>
 
 <h2>Who We Serve</h2>
 <p>
-We serve local farmers, youth, and community members in Njawara and surrounding areas. Our programs focus on building practical skills, improving farm profitability, and promoting sustainable natural resource management.
+We serve local farmers, youth, and community members in Njawara and surrounding areas.
 </p>
 
 <h2>Location</h2>
 <p>
-Njawara Village, Central River Region, The Gambia
+Njawara Village, North Bank Region, The Gambia
 </p>
 
 <div class="spacer"></div>
@@ -197,13 +201,15 @@ Njawara Village, Central River Region, The Gambia
     <img src="natc-logo.jpeg" alt="NATC Logo">
   </div>
 
+  <div class="divider"></div>
+
   <div class="contact-card">
     <div class="contact-card-inner">
       <h2>Contact Us</h2>
       <p>
         <strong>Email:</strong> njawaraatc@gmail.com<br>
         <strong>Phone:</strong> +220 123 4567<br>
-        <strong>Address:</strong> Njawara Agriculture Training Center, Njawara, Central River Region, The Gambia
+        <strong>Address:</strong> Njawara Agriculture Training Center, Njawara, North Bank Region, The Gambia
       </p>
       <p>
         This site is managed by the Njawara Agriculture Training Center.
