@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+    }
 
     header {
       background-color: #2f6b2f;
@@ -22,14 +26,43 @@
       padding-bottom: 4px;
     }
 
-    /* ACTIVE PAGE */
+    /* ACTIVE PAGE HIGHLIGHT */
     nav a.active {
       border-bottom: 3px solid #ffffff;
     }
 
-    main { padding: 20px; max-width: 900px; margin: 0 auto; }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-    .spacer { height: 600px; }
+    h2 {
+      color: #2f6b2f;
+    }
+
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+      align-items: center;
+    }
+
+    .project-image {
+      width: 250px;
+      height: 150px;
+      background-color: #2f6b2f; /* Green placeholder */
+      flex-shrink: 0;
+    }
+
+    .project-content {
+      flex: 1;
+    }
+
+    .spacer {
+      height: 200px;
+    }
 
     footer {
       background-color: #d4edda;
@@ -41,9 +74,17 @@
       gap: 30px;
     }
 
-    .natc-logo { width: 45%; display: flex; justify-content: center; align-items: center; }
+    .natc-logo {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-    .natc-logo img { max-width: 300px; width: 100%; }
+    .natc-logo img {
+      max-width: 300px;
+      width: 100%;
+    }
 
     .divider {
       width: 6px;
@@ -52,7 +93,11 @@
       border-radius: 20px;
     }
 
-    .contact-card { width: 45%; display: flex; justify-content: center; }
+    .contact-card {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+    }
 
     .contact-card-inner {
       background-color: #a8d5a2;
@@ -63,9 +108,21 @@
     }
 
     @media (max-width: 768px) {
-      footer { flex-direction: column; }
-      .divider { display: none; }
-      .natc-logo, .contact-card { width: 100%; }
+      .project {
+        flex-direction: column;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+
+      .divider {
+        display: none;
+      }
+
+      .natc-logo, .contact-card {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -73,6 +130,7 @@
 <body>
 
 <header>
+  <h1>Njawara Agriculture Training Center</h1>
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html" class="active">Projects</a>
@@ -83,8 +141,40 @@
 </header>
 
 <main>
-  <h1>Projects</h1>
-  <p>Content coming soon.</p>
+  <h1>Our Projects</h1>
+
+  <div class="project">
+    <div class="project-image"></div>
+    <div class="project-content">
+      <h2>CIRAWA Project Stakeholders Advisory Board Meeting</h2>
+      <p>A strategic meeting with CIRAWA Project Stakeholders Advisory Board members held at the NARI Conference Hall to discuss project progress, plans, and collaboration opportunities. (30/12/2025)</p>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-image"></div>
+    <div class="project-content">
+      <h2>Agroforestry Training for Farmers</h2>
+      <p>Farmers managing Living Labs under the CIRAWA Project received hands-on training in agroforestry techniques at NATC to improve sustainability and farm productivity. (17/12/2025)</p>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-image"></div>
+    <div class="project-content">
+      <h2>ICCR Project Infrastructure Handover</h2>
+      <p>Completion and handover of a waiting shed with improved cooking stoves and a tricycle to women oyster farmers in Tambana Village, supporting livelihoods and community development. (24/12/2025)</p>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-image"></div>
+    <div class="project-content">
+      <h2>ICCR Project Donor & Partner Closure Meeting</h2>
+      <p>Final closure meeting of the ICCR project with donor representatives (Irish Aid–United Purpose/Self Help Africa) and local partners to review outcomes and lessons learned. (17/11/2025)</p>
+    </div>
+  </div>
+
   <div class="spacer"></div>
 </main>
 
@@ -111,7 +201,9 @@
 document.querySelectorAll('.contact-link').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact').scrollIntoView({
+      behavior: 'smooth'
+    });
   });
 });
 </script>
