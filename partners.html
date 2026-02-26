@@ -2,73 +2,140 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Programs - Njawara Agriculture Training Center</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partners - Njawara Agriculture Training Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
+      margin: 0;
+      line-height: 1.6;
     }
 
-    nav {
-      background-color: #2e7d32;
-      padding: 15px;
-      text-align: center;
+    header {
+      background-color: #2f6b2f;
+      color: white;
+      padding: 20px;
     }
 
     nav a {
+      margin-right: 15px;
       color: white;
-      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .content {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
+    /* ADD THIS */
     .spacer {
       height: 600px;
     }
 
-    .contact {
-      background-color: #f5f5f5;
+    footer {
+      background-color: #d4edda;
       padding: 40px 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .natc-logo {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .natc-logo img {
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .divider {
+      width: 6px;
+      height: 340px;
+      background-color: #5a8f5a;
+      border-radius: 20px;
+    }
+
+    .contact-card {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-card-inner {
+      background-color: #a8d5a2;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      footer { flex-direction: column; }
+      .divider { display: none; }
+      .natc-logo, .contact-card { width: 100%; }
     }
   </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="programs.html">Programs</a>
-  <a href="projects.html">Projects</a>
-  <a href="partners.html">Partners</a>
-  <a href="#contact">Contact</a>
-</nav>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Partners.html">Partners</a>
+    <a href="programs.html">Programs</a>
+    <a href="partners.html">Partners</a>
+    <a href="#contact" class="contact-link">Contact</a>
+  </nav>
+</header>
 
-<section class="content">
-  <h1>Our Programs</h1>
-  <p>Content coming soon...</p>
-</section>
+<main>
+  <h1>Partners</h1>
+  <p>Content coming soon.</p>
 
-<div class="spacer"></div>
+  <!-- ADD THIS -->
+  <div class="spacer"></div>
+</main>
 
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>Email: njawaraagriculture@gmail.com</p>
-  <p>Phone: +220 XXX XXXX</p>
-  <p>Location: Njawara Village, The Gambia</p>
-</section>
+<footer id="contact">
+  <div class="natc-logo">
+    <img src="natc-logo.jpeg">
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contact-card">
+    <div class="contact-card-inner">
+      <h2>Contact Us</h2>
+      <p>
+        <strong>Email:</strong> njawaraatc@gmail.com<br>
+        <strong>Phone:</strong> +220 123 4567<br>
+        <strong>Address:</strong> Njawara, North Bank Region, The Gambia
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.contact-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('contact').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
 
 </body>
 </html>
