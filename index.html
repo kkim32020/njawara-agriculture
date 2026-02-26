@@ -6,11 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; }
 
     header {
       background-color: #2f6b2f;
@@ -18,74 +14,32 @@
       padding: 20px;
     }
 
-    header h1 {
-      display: inline-block;
-      margin: 0;
-      vertical-align: middle;
-    }
-
-    header img {
-      height: 40px;
-      margin-left: 12px;
-      vertical-align: middle;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
     nav a {
       margin-right: 15px;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
+      padding-bottom: 4px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    nav a.active {
+      border-bottom: 3px solid white;
     }
 
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      color: #2f6b2f;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .spacer {
-      height: 600px;
-    }
+    main { padding: 20px; max-width: 900px; margin: 0 auto; }
 
     footer {
       background-color: #d4edda;
       padding: 40px 20px;
       display: flex;
-      align-items: center;
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
     }
 
-    .natc-logo {
-      width: 45%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    .natc-logo { width: 45%; display: flex; justify-content: center; }
 
-    .natc-logo img {
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-    }
+    .natc-logo img { max-width: 300px; width: 100%; }
 
     .divider {
       width: 6px;
@@ -94,45 +48,20 @@
       border-radius: 20px;
     }
 
-    .contact-card {
-      width: 45%;
-      display: flex;
-      justify-content: center;
-    }
+    .contact-card { width: 45%; display: flex; justify-content: center; }
 
     .contact-card-inner {
       background-color: #a8d5a2;
-      padding: 30px 25px;
+      padding: 30px;
       border-radius: 12px;
       max-width: 400px;
       width: 100%;
     }
 
-    .contact-card-inner h2 {
-      margin-top: 0;
-    }
-
     @media (max-width: 768px) {
-      footer {
-        flex-direction: column;
-      }
-
-      .natc-logo,
-      .contact-card {
-        width: 100%;
-      }
-
-      .divider {
-        display: none;
-      }
-
-      .natc-logo img {
-        max-width: 70%;
-      }
-
-      .contact-card-inner {
-        max-width: 90%;
-      }
+      footer { flex-direction: column; }
+      .divider { display: none; }
+      .natc-logo, .contact-card { width: 100%; }
     }
   </style>
 </head>
@@ -140,10 +69,8 @@
 <body>
 
 <header>
-  <h1>Njawara Agriculture Training Center</h1>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_The_Gambia.svg" alt="Flag of The Gambia">
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="projects.html">Projects</a>
     <a href="programs.html">Programs</a>
     <a href="partners.html">Partners</a>
@@ -152,48 +79,20 @@
 </header>
 
 <main>
+  <h1>Njawara Agriculture Training Center</h1>
 
-<h2>About Us</h2>
-<p>
-The Njawara Agriculture Training Center (NATC) is a community-led organization founded in 1990 and registered as an NGO in 1997. The center is currently led by Director Al Pha Sey, who continues to guide its mission of strengthening rural livelihoods through sustainable agriculture.
-</p>
+  <h2>About Us</h2>
+  <p>
+    The Njawara Agriculture Training Center (NATC) is a community-led organization founded in 1990 and registered as an NGO in 1997. The center is currently led by Director Al Pha Sey.
+  </p>
 
-<p>
-Located in Njawara Village, the center includes training facilities and demonstration fields where both men and women learn improved farming techniques designed to increase productivity while protecting the environment.
-</p>
-
-<h2>Our Mission</h2>
-<p>
-Our mission is to work in partnership with local and international institutions to train farmers in sustainable agricultural systems. We aim to promote self-reliance, increase employment opportunities, reduce poverty, and discourage rural-to-urban migration.
-</p>
-
-<h2>Our Vision</h2>
-<p>
-We envision stronger rural communities with improved livelihoods, reliable food systems, and increased economic opportunities.
-</p>
-
-<h2>What We Do</h2>
-<ul>
-  <li>Crop production and demonstration plots</li>
-  <li>Agroforestry and integration of trees with farmland</li>
-  <li>Soil and water conservation techniques</li>
-  <li>Livestock and crop integration</li>
-  <li>Pest management and climate resilience strategies</li>
-</ul>
-
-<h2>Location</h2>
-<p>
-Njawara Village, North Bank Region, The Gambia
-</p>
-
-<div class="spacer"></div>
-
+  <h2>Location</h2>
+  <p>Njawara Village, North Bank Region, The Gambia</p>
 </main>
 
 <footer id="contact">
-
   <div class="natc-logo">
-    <img src="natc-logo.jpeg" alt="NATC Logo">
+    <img src="natc-logo.jpeg">
   </div>
 
   <div class="divider"></div>
@@ -202,27 +101,19 @@ Njawara Village, North Bank Region, The Gambia
     <div class="contact-card-inner">
       <h2>Contact Us</h2>
       <p>
-        <strong>Email:</strong> njawaraatc@gmail.com<br>
-        <strong>Phone:</strong> +220 123 4567<br>
-        <strong>Address:</strong> Njawara Agriculture Training Center, Njawara, North Bank Region, The Gambia
-      </p>
-      <p>
-        This site is managed by the Njawara Agriculture Training Center.
+        Email: njawaraatc@gmail.com<br>
+        Phone: +220 123 4567<br>
+        Address: Njawara, North Bank Region, The Gambia
       </p>
     </div>
   </div>
-
 </footer>
 
 <script>
-  document.querySelectorAll('.contact-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('contact').scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
+document.querySelector('.contact-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+});
 </script>
 
 </body>
