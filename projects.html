@@ -6,11 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; }
 
     header {
       background-color: #2f6b2f;
@@ -23,18 +19,17 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      padding-bottom: 4px;
     }
 
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: 0 auto;
+    /* ACTIVE PAGE */
+    nav a.active {
+      border-bottom: 3px solid #ffffff;
     }
 
-    /* ADD THIS */
-    .spacer {
-      height: 600px;
-    }
+    main { padding: 20px; max-width: 900px; margin: 0 auto; }
+
+    .spacer { height: 600px; }
 
     footer {
       background-color: #d4edda;
@@ -46,17 +41,9 @@
       gap: 30px;
     }
 
-    .natc-logo {
-      width: 45%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    .natc-logo { width: 45%; display: flex; justify-content: center; align-items: center; }
 
-    .natc-logo img {
-      max-width: 300px;
-      width: 100%;
-    }
+    .natc-logo img { max-width: 300px; width: 100%; }
 
     .divider {
       width: 6px;
@@ -65,11 +52,7 @@
       border-radius: 20px;
     }
 
-    .contact-card {
-      width: 45%;
-      display: flex;
-      justify-content: center;
-    }
+    .contact-card { width: 45%; display: flex; justify-content: center; }
 
     .contact-card-inner {
       background-color: #a8d5a2;
@@ -92,7 +75,7 @@
 <header>
   <nav>
     <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
+    <a href="projects.html" class="active">Projects</a>
     <a href="programs.html">Programs</a>
     <a href="partners.html">Partners</a>
     <a href="#contact" class="contact-link">Contact</a>
@@ -102,8 +85,6 @@
 <main>
   <h1>Projects</h1>
   <p>Content coming soon.</p>
-
-  <!-- ADD THIS -->
   <div class="spacer"></div>
 </main>
 
@@ -130,9 +111,7 @@
 document.querySelectorAll('.contact-link').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
-    document.getElementById('contact').scrollIntoView({
-      behavior: 'smooth'
-    });
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
   });
 });
 </script>
