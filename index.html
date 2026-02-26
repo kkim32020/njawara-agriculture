@@ -6,47 +6,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-html { scroll-behavior: smooth; }
+body { font-family: Arial; margin: 0; }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
-
-header {
-  background-color: #2f6b2f;
-  color: white;
-  padding: 20px;
-}
+header { background:#2f6b2f; color:white; padding:20px; }
 
 nav a {
-  margin-right: 15px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+  color:white;
+  margin-right:15px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-main {
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
-}
+main { padding:20px; max-width:900px; margin:auto; }
 
 footer {
-  background-color: #d4edda;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  background:#d4edda;
+  padding:40px;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
 }
 
 .divider {
-  width: 6px;
-  height: 340px;
-  background-color: #5a8f5a;
-  border-radius: 20px;
+  width:6px;
+  height:340px;
+  background:#5a8f5a;
+  border-radius:20px;
 }
 </style>
 </head>
@@ -54,14 +40,14 @@ footer {
 <body>
 
 <header>
-  <h1>Njawara Agriculture Training Center</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="programs.html">Programs</a>
-    <a href="partners.html">Partners</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h1>Njawara Agriculture Training Center</h1>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="programs.html">Programs</a>
+  <a href="partners.html">Partners</a>
+  <a href="#contact" class="contact-link">Contact</a>
+</nav>
 </header>
 
 <main>
@@ -82,7 +68,7 @@ To train farmers in sustainable agriculture and improve livelihoods in rural com
 <footer id="contact">
 
 <div style="width:45%; text-align:center;">
-  <img src="natc-logo.jpeg" style="max-width:280px; width:100%;">
+  <img src="natc-logo.jpeg" style="max-width:280px;">
 </div>
 
 <div class="divider"></div>
@@ -90,14 +76,22 @@ To train farmers in sustainable agriculture and improve livelihoods in rural com
 <div style="width:45%;">
   <div style="background:#a8d5a2; padding:25px; border-radius:12px;">
     <h2>Contact Us</h2>
-    <p>
-      Email: njawaraatc@gmail.com<br>
-      Phone: +220 123 4567
-    </p>
+    <p>Email: njawaraatc@gmail.com<br>Phone: +220 123 4567</p>
   </div>
 </div>
 
 </footer>
+
+<script>
+document.querySelectorAll('.contact-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('contact').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
 
 </body>
 </html>
